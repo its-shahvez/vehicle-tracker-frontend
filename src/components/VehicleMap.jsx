@@ -37,7 +37,7 @@ function VehicleMap() {
     useEffect(() => {
         const loadData = async () => {
             try {
-                const response = await axios.get('http://localhost:8080/api/route');
+                const response = await axios.get('https://vehicle-tracker-backend-ciwr.onrender.com/api/route');
                 const formattedData = response.data.map(p => ({ lat: p.latitude, lng: p.longitude, timestamp: p.timestamp }));
                 setRouteData(formattedData);
             } catch (error) {
