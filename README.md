@@ -1,16 +1,54 @@
-# React + Vite
+# 🚗 Vehicle Tracker UI (Frontend)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the frontend user interface for the Vehicle Tracker application, built with React, Vite, and React-Leaflet. It visualizes a vehicle's journey on an interactive map by fetching route data from a [corresponding backend API](https://github.com/your-username/vehicle-tracker-backend).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* **Interactive Map:** Uses **React-Leaflet** to display an interactive map.
+* **Live Simulation:** Simulates the vehicle's movement along the route with "Play" and "Pause" controls.
+* **Dynamic Polylines:** Renders the entire planned route (in gray) and the *traveled* route (in blue).
+* **Rotating Vehicle Icon:** The vehicle icon smoothly animates and rotates to face the direction of travel.
+* **Map Style Switcher:** Allows toggling between "Street" and "Satellite" map tiles.
+* **Playback Slider:** A slider to "scrub" through the trip and view the vehicle's position at any point.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* **Framework:** [React.js](https://react.dev/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Styling:** [Tailwind CSS](https://tailwindcss.com/)
+* **Mapping:** [React-Leaflet](https://react-leaflet.js.org/) & [Leaflet](https://leafletjs.com/)
+* **Data Fetching:** [Axios](https://axios-http.com/)
+
+---
+
+## 🚀 How to Run Locally
+
+### **Prerequisite: The Backend Must Be Running!**
+
+This frontend application **requires** the [Spring Boot backend service](https://github.com/your-username/vehicle-tracker-backend) to be running on `http://localhost:8080` to fetch the route data.
+
+---
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/vehicle-tracker-frontend.git](https://github.com/your-username/vehicle-tracker-frontend.git)
+    cd vehicle-tracker-frontend
+    ```
+
+2.  **Install dependencies:**
+    This will install React, Leaflet, Tailwind, and all other necessary packages.
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  **Open the application:**
+    Your browser will automatically open to `http://localhost:5173`.
